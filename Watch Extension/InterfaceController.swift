@@ -19,6 +19,9 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
 
         activateSession()
+
+        configueRealmURL(with: getRealmFileUrl())
+
         setupPlayList()
 
     }
@@ -46,6 +49,16 @@ class InterfaceController: WKInterfaceController {
         }
     }
 
+    func getRealmFileUrl() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory.appendingPathComponent("data.realm")
+    }
+
+    func configueRealmURL(with realmURL: URL) {
+        var config = Realm.Configuration()
+        config.fileURL = realmURL
+        Realm.Configuration.defaultConfiguration = config
     }
 }
 
@@ -67,20 +80,14 @@ extension InterfaceController: WCSessionDelegate {
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
 
         //set the recieved file to default Realm file
-        var config = Realm.Configuration()
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        let realmURL = documentsDirectory.appendingPathComponent("data.realm")
+        let realmURL = getRealmFileUrl()
         if FileManager.default.fileExists(atPath: realmURL.path){
             try! FileManager.default.removeItem(at: realmURL)
         }
         try! FileManager.default.copyItem(at: file.fileURL, to: realmURL)
-        config.fileURL = realmURL
-        Realm.Configuration.defaultConfiguration = config
 
-        // display the first of realm objects
-        let realm = try! Realm()
-        let playLists = realm.objects(WDSPlayList.self)
-        print("receive: \(playLists.first)")
+        configueRealmURL(with: realmURL)
+
+        setupPlayList()
     }
 }
