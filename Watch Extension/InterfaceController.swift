@@ -13,10 +13,14 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var playListTable: WKInterfaceTable!
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
         activateSession()
+        setupPlayList()
+
     }
     
     override func willActivate() {
@@ -29,6 +33,20 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    func setupPlayList() {
+        let realm = try! Realm()
+        let playLists = realm.objects(WDSPlayList.self)
+
+        playListTable.setNumberOfRows(playLists.count, withRowType: "PlayListRow")
+
+        for index in 0..<playListTable.numberOfRows {
+            guard let controller = playListTable.rowController(at: index) as? WDSPlayListRowController else { continue }
+
+            controller.playList = playLists[index]
+        }
+    }
+
+    }
 }
 
 extension InterfaceController: WCSessionDelegate {
