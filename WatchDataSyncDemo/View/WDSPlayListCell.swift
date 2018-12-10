@@ -14,4 +14,9 @@ class WDSPlayListCell: UITableViewCell {
     @IBOutlet weak var favoriteScoreLabel: UILabel!
     @IBOutlet weak var describeLabel: UILabel!
 
+    func configure(with songList: WDSPlayList) {
+        nameLabel.text = songList.name
+        favoriteScoreLabel.text = songList.scoreString()
+        describeLabel.text = songList.describe
+    }
 }

@@ -46,18 +46,21 @@ class WDSAlertService {
     }
 
     static func updateAlert(in vc: UIViewController,
-                            songList: Any,
+                            songList: WDSPlayList,
                             completion: @escaping (String, Int?, String?) -> Void) {
 
         let alert = UIAlertController(title: "更新播放清單", message: nil, preferredStyle: .alert)
         alert.addTextField { (nameTF) in
             nameTF.placeholder = "輸入播放清單名稱"
+            nameTF.text = songList.name
         }
         alert.addTextField { (scoreTF) in
             scoreTF.placeholder = "輸入喜愛分數"
+            scoreTF.text = songList.scoreString()
         }
         alert.addTextField { (describeTF) in
             describeTF.placeholder = "輸入歌單描述"
+            describeTF.text = songList.describe
         }
 
         let action = UIAlertAction(title: "Update", style: .default) { (_) in
