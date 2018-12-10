@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648EFCA7266344E3C3226C56 /* Pods_WatchDataSyncDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041EF921A5E62E5C76DFD0FC /* Pods_WatchDataSyncDemoTests.framework */; };
 		9BE2B1AB21BE3ADF004CC236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1AA21BE3ADF004CC236 /* AppDelegate.swift */; };
 		9BE2B1AD21BE3ADF004CC236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1AC21BE3ADF004CC236 /* ViewController.swift */; };
 		9BE2B1B021BE3ADF004CC236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2B1AE21BE3ADF004CC236 /* Main.storyboard */; };
 		9BE2B1B221BE3AE1004CC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2B1B121BE3AE1004CC236 /* Assets.xcassets */; };
 		9BE2B1B521BE3AE1004CC236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2B1B321BE3AE1004CC236 /* LaunchScreen.storyboard */; };
 		9BE2B1C021BE3AE1004CC236 /* WatchDataSyncDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1BF21BE3AE1004CC236 /* WatchDataSyncDemoTests.swift */; };
+		9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */; };
+		9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */; };
+		9BE2B1D521BE4DED004CC236 /* WDSPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */; };
+		9BE2B1D921BE5448004CC236 /* WDSRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */; };
+		BE15DD828202693F033A393D /* Pods_WatchDataSyncDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041EF921A5E62E5C76DFD0FC /* Pods_WatchDataSyncDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchDataSyncDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchDataSyncDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4621BB7AE6E02026D95DFCDD /* Pods-WatchDataSyncDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemoTests/Pods-WatchDataSyncDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BD4816A38F72C72EB491863 /* Pods-WatchDataSyncDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE2B1A721BE3ADF004CC236 /* WatchDataSyncDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDataSyncDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE2B1AA21BE3ADF004CC236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE2B1AC21BE3ADF004CC236 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +46,12 @@
 		9BE2B1BB21BE3AE1004CC236 /* WatchDataSyncDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchDataSyncDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE2B1BF21BE3AE1004CC236 /* WatchDataSyncDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataSyncDemoTests.swift; sourceTree = "<group>"; };
 		9BE2B1C121BE3AE1004CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayListCell.swift; sourceTree = "<group>"; };
+		9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSAlertService.swift; sourceTree = "<group>"; };
+		9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayList.swift; sourceTree = "<group>"; };
+		9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSRealmService.swift; sourceTree = "<group>"; };
+		DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FDF48B124B61AD363867ABF0 /* Pods-WatchDataSyncDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemoTests/Pods-WatchDataSyncDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE15DD828202693F033A393D /* Pods_WatchDataSyncDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +67,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648EFCA7266344E3C3226C56 /* Pods_WatchDataSyncDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19EE61D03CAE7AFF06AC9117 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BD4816A38F72C72EB491863 /* Pods-WatchDataSyncDemo.debug.xcconfig */,
+				DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */,
+				4621BB7AE6E02026D95DFCDD /* Pods-WatchDataSyncDemoTests.debug.xcconfig */,
+				FDF48B124B61AD363867ABF0 /* Pods-WatchDataSyncDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3881600CF7F31064C05E1BF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */,
+				041EF921A5E62E5C76DFD0FC /* Pods_WatchDataSyncDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9BE2B19E21BE3ADF004CC236 = {
 			isa = PBXGroup;
 			children = (
 				9BE2B1A921BE3ADF004CC236 /* WatchDataSyncDemo */,
 				9BE2B1BE21BE3AE1004CC236 /* WatchDataSyncDemoTests */,
 				9BE2B1A821BE3ADF004CC236 /* Products */,
+				19EE61D03CAE7AFF06AC9117 /* Pods */,
+				3881600CF7F31064C05E1BF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +117,9 @@
 		9BE2B1A921BE3ADF004CC236 /* WatchDataSyncDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B1D321BE4D02004CC236 /* Model */,
+				9BE2B1CD21BE45DC004CC236 /* Service */,
+				9BE2B1CA21BE41AA004CC236 /* View */,
 				9BE2B1AA21BE3ADF004CC236 /* AppDelegate.swift */,
 				9BE2B1AC21BE3ADF004CC236 /* ViewController.swift */,
 				9BE2B1AE21BE3ADF004CC236 /* Main.storyboard */,
@@ -96,6 +139,31 @@
 			path = WatchDataSyncDemoTests;
 			sourceTree = "<group>";
 		};
+		9BE2B1CA21BE41AA004CC236 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BE2B1CD21BE45DC004CC236 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */,
+				9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9BE2B1D321BE4D02004CC236 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BE2B1C421BE3AE1004CC236 /* Build configuration list for PBXNativeTarget "WatchDataSyncDemo" */;
 			buildPhases = (
+				1196640FA3FB40FC03D14DB2 /* [CP] Check Pods Manifest.lock */,
 				9BE2B1A321BE3ADF004CC236 /* Sources */,
 				9BE2B1A421BE3ADF004CC236 /* Frameworks */,
 				9BE2B1A521BE3ADF004CC236 /* Resources */,
+				C4F3E6932A4AC781D2AAD516 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BE2B1C721BE3AE1004CC236 /* Build configuration list for PBXNativeTarget "WatchDataSyncDemoTests" */;
 			buildPhases = (
+				31A7DA7332EC17D56DDE9FB4 /* [CP] Check Pods Manifest.lock */,
 				9BE2B1B721BE3AE1004CC236 /* Sources */,
 				9BE2B1B821BE3AE1004CC236 /* Frameworks */,
 				9BE2B1B921BE3AE1004CC236 /* Resources */,
@@ -140,6 +211,7 @@
 		9BE2B19F21BE3ADF004CC236 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WDS;
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = JackySONE;
@@ -192,13 +264,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1196640FA3FB40FC03D14DB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchDataSyncDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A7DA7332EC17D56DDE9FB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchDataSyncDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F3E6932A4AC781D2AAD516 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9BE2B1A321BE3ADF004CC236 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9BE2B1AD21BE3ADF004CC236 /* ViewController.swift in Sources */,
+				9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */,
+				9BE2B1D921BE5448004CC236 /* WDSRealmService.swift in Sources */,
 				9BE2B1AB21BE3ADF004CC236 /* AppDelegate.swift in Sources */,
+				9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */,
+				9BE2B1D521BE4DED004CC236 /* WDSPlayList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +505,7 @@
 		};
 		9BE2B1C521BE3AE1004CC236 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD4816A38F72C72EB491863 /* Pods-WatchDataSyncDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +524,7 @@
 		};
 		9BE2B1C621BE3AE1004CC236 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +543,7 @@
 		};
 		9BE2B1C821BE3AE1004CC236 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4621BB7AE6E02026D95DFCDD /* Pods-WatchDataSyncDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +565,7 @@
 		};
 		9BE2B1C921BE3AE1004CC236 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF48B124B61AD363867ABF0 /* Pods-WatchDataSyncDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
