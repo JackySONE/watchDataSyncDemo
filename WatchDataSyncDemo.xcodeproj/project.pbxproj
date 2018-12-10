@@ -14,6 +14,7 @@
 		9BE2B1B521BE3AE1004CC236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2B1B321BE3AE1004CC236 /* LaunchScreen.storyboard */; };
 		9BE2B1C021BE3AE1004CC236 /* WatchDataSyncDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1BF21BE3AE1004CC236 /* WatchDataSyncDemoTests.swift */; };
 		9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */; };
+		9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9BE2B1BF21BE3AE1004CC236 /* WatchDataSyncDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataSyncDemoTests.swift; sourceTree = "<group>"; };
 		9BE2B1C121BE3AE1004CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayListCell.swift; sourceTree = "<group>"; };
+		9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSAlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		9BE2B1A921BE3ADF004CC236 /* WatchDataSyncDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B1CD21BE45DC004CC236 /* Service */,
 				9BE2B1CA21BE41AA004CC236 /* View */,
 				9BE2B1AA21BE3ADF004CC236 /* AppDelegate.swift */,
 				9BE2B1AC21BE3ADF004CC236 /* ViewController.swift */,
@@ -105,6 +108,14 @@
 				9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9BE2B1CD21BE45DC004CC236 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				9BE2B1AD21BE3ADF004CC236 /* ViewController.swift in Sources */,
 				9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */,
 				9BE2B1AB21BE3ADF004CC236 /* AppDelegate.swift in Sources */,
+				9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

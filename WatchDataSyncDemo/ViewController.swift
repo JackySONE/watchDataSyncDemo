@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onAddTapped() {
-
+        WDSAlertService.addAlert(in: self) { (name, score, describe) in
+            
+        }
     }
 }
 
