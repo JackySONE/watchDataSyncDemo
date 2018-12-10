@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import WatchConnectivity
 
 class ViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
         WDSRealmService.shared.observeRealmErrors(in: self) { (error) in
             print(error ?? "No error detected")
         }
+
+        activateSession()
     }
 
     deinit {
@@ -44,6 +47,8 @@ class ViewController: UIViewController {
 
         notificationToken = realm.observe { [unowned self] (notification, realm) in
             self.tableView.reloadData()
+            self.transferRealmFile()
+
         }
     }
 }
@@ -87,3 +92,38 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
+extension ViewController: WCSessionDelegate {
+
+    func activateSession(){
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+    }
+
+    func transferRealmFile(){
+        if let path = Realm.Configuration().fileURL {
+            WCSession.default.transferFile(path, metadata: nil)
+        }
+    }
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidComplete")
+        print("\(#function): activationDidComplete = \(session.activationState.rawValue)")
+
+    }
+
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("\(#function): activationState = \(session.activationState.rawValue)")
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+        // Activate the new session after having switched to a new watch.
+        session.activate()
+    }
+
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        print("\(#function): activationState = \(session.activationState.rawValue)")
+    }
+}

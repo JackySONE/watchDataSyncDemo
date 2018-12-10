@@ -8,13 +8,15 @@
 
 import WatchKit
 import Foundation
+import RealmSwift
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+
+        activateSession()
     }
     
     override func willActivate() {
@@ -27,4 +29,40 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+
+extension InterfaceController: WCSessionDelegate {
+
+    func activateSession(){
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidComplete")
+    }
+
+    // When the file was received
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+
+        //set the recieved file to default Realm file
+        var config = Realm.Configuration()
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        let realmURL = documentsDirectory.appendingPathComponent("data.realm")
+        if FileManager.default.fileExists(atPath: realmURL.path){
+            try! FileManager.default.removeItem(at: realmURL)
+        }
+        try! FileManager.default.copyItem(at: file.fileURL, to: realmURL)
+        config.fileURL = realmURL
+        Realm.Configuration.defaultConfiguration = config
+
+        // display the first of realm objects
+        let realm = try! Realm()
+        let playLists = realm.objects(WDSPlayList.self)
+        print("receive: \(playLists.first)")
+    }
 }
