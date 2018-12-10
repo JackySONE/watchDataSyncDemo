@@ -13,7 +13,7 @@
         <!--播放列表-->
         <scene sceneID="nTq-h1-1wK">
             <objects>
-                <viewController id="kV5-ky-XSq" customClass="ViewController" customModule="Pick_Up_Lines" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kV5-ky-XSq" customClass="ViewController" customModule="WatchDataSyncDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jJ-W7-cPF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,8 +77,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="kV5-ky-XSq" id="Cix-wT-x5B"/>
-                                    <outlet property="delegate" destination="kV5-ky-XSq" id="Uai-I6-sH0"/>
+                                    <outlet property="dataSource" destination="kV5-ky-XSq" id="oyz-hc-2fT"/>
+                                    <outlet property="delegate" destination="kV5-ky-XSq" id="lV5-ZJ-0FQ"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -100,7 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="dgg-lP-kiR" id="XZE-Gf-FSK"/>
+                        <outlet property="tableView" destination="dgg-lP-kiR" id="obY-du-Cpo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZf-uU-pTl" sceneMemberID="firstResponder"/>

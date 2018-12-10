@@ -15,9 +15,9 @@ import RealmSwift
     let favoriteScore = RealmOptional<Int>()
     dynamic var describe: String? = nil
 
-    convenience init(line: String, score: Int?, describe: String?) {
+    convenience init(name: String, score: Int?, describe: String?) {
         self.init()
-        self.name = line
+        self.name = name
         self.favoriteScore.value = score
         self.describe = describe
     }
