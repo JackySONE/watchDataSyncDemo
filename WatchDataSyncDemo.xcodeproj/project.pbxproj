@@ -17,6 +17,7 @@
 		9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */; };
 		9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */; };
 		9BE2B1D521BE4DED004CC236 /* WDSPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */; };
+		9BE2B1D921BE5448004CC236 /* WDSRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */; };
 		BE15DD828202693F033A393D /* Pods_WatchDataSyncDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		9BE2B1CB21BE4239004CC236 /* WDSPlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayListCell.swift; sourceTree = "<group>"; };
 		9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSAlertService.swift; sourceTree = "<group>"; };
 		9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayList.swift; sourceTree = "<group>"; };
+		9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSRealmService.swift; sourceTree = "<group>"; };
 		DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FDF48B124B61AD363867ABF0 /* Pods-WatchDataSyncDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemoTests/Pods-WatchDataSyncDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9BE2B1D021BE4642004CC236 /* WDSAlertService.swift */,
+				9BE2B1D821BE5448004CC236 /* WDSRealmService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				9BE2B1AD21BE3ADF004CC236 /* ViewController.swift in Sources */,
 				9BE2B1CC21BE4239004CC236 /* WDSPlayListCell.swift in Sources */,
+				9BE2B1D921BE5448004CC236 /* WDSRealmService.swift in Sources */,
 				9BE2B1AB21BE3ADF004CC236 /* AppDelegate.swift in Sources */,
 				9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */,
 				9BE2B1D521BE4DED004CC236 /* WDSPlayList.swift in Sources */,
