@@ -11,9 +11,15 @@ import Foundation
 import RealmSwift
 import WatchConnectivity
 
+struct WatchSettings {
+    static let sharedContainerID = "group.com.sone.SimpleWatchConnectivity"
+    static let lastPlayListSyncTime = "lastPlayListSyncTime"
+}
+
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var playListTable: WKInterfaceTable!
+    @IBOutlet weak var lastUpdateLabel: WKInterfaceLabel!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -24,6 +30,7 @@ class InterfaceController: WKInterfaceController {
 
         setupPlayList()
 
+        setupLastUpdateTime()
     }
     
     override func willActivate() {
@@ -49,6 +56,14 @@ class InterfaceController: WKInterfaceController {
         }
     }
 
+    func setupLastUpdateTime() {
+        if let defaults = UserDefaults(suiteName: WatchSettings.sharedContainerID) {
+            if let lastSyncTime = defaults.string(forKey: WatchSettings.lastPlayListSyncTime) {
+                lastUpdateLabel.setText(lastSyncTime)
+            }
+        }
+    }
+
     func getRealmFileUrl() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
@@ -59,6 +74,19 @@ class InterfaceController: WKInterfaceController {
         var config = Realm.Configuration()
         config.fileURL = realmURL
         Realm.Configuration.defaultConfiguration = config
+    }
+
+    func updateLastSyncTime() {
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .medium
+        let timeString = dateFormatter.string(from: Date())
+
+        if let defaults = UserDefaults(suiteName: WatchSettings.sharedContainerID) {
+            defaults.set(timeString, forKey: WatchSettings.lastPlayListSyncTime)
+        }
+
+        lastUpdateLabel.setText(timeString)
     }
 }
 
@@ -89,5 +117,7 @@ extension InterfaceController: WCSessionDelegate {
         configueRealmURL(with: file.fileURL)
 
         setupPlayList()
+
+        updateLastSyncTime()
     }
 }

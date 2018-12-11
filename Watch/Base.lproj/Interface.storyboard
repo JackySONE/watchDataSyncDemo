@@ -49,6 +49,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="lastUpdateLabel" destination="1Ms-pd-IEm" id="QMS-4v-MOp"/>
                         <outlet property="playListTable" destination="V4P-J1-Glu" id="XgF-UI-sP9"/>
                     </connections>
                 </controller>
