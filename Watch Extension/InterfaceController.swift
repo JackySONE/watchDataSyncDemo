@@ -86,7 +86,7 @@ extension InterfaceController: WCSessionDelegate {
         }
         try! FileManager.default.copyItem(at: file.fileURL, to: realmURL)
 
-        configueRealmURL(with: realmURL)
+        configueRealmURL(with: file.fileURL)
 
         setupPlayList()
     }
