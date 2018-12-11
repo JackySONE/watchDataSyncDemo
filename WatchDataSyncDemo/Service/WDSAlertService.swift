@@ -63,7 +63,7 @@ class WDSAlertService {
             describeTF.text = songList.describe
         }
 
-        let action = UIAlertAction(title: "Update", style: .default) { (_) in
+        let action = UIAlertAction(title: "更新", style: .default) { (_) in
             guard let name = alert.textFields?.first?.text,
                 let scoreString = alert.textFields?[1].text,
                 let describeString = alert.textFields?.last?.text
