@@ -27,6 +27,7 @@
 		9BE2B1F221BE5F21004CC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2B1F121BE5F21004CC236 /* Assets.xcassets */; };
 		9BE2B1F621BE5F21004CC236 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9BE2B1DC21BE5F1F004CC236 /* Watch.app */; };
 		9BE2B20321BE8C08004CC236 /* WDSPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */; };
+		9BE2B20521BE97B6004CC236 /* WDSPlayListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B20421BE97B6004CC236 /* WDSPlayListRowController.swift */; };
 		BE15DD828202693F033A393D /* Pods_WatchDataSyncDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,10 @@
 		9BE2B1EF21BE5F21004CC236 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9BE2B1F121BE5F21004CC236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BE2B1F321BE5F21004CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE2B20421BE97B6004CC236 /* WDSPlayListRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDSPlayListRowController.swift; sourceTree = "<group>"; };
+		9BE2B20721BFB1A2004CC236 /* WatchDataSyncDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchDataSyncDemo.entitlements; sourceTree = "<group>"; };
+		9BE2B20821BFB218004CC236 /* Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Watch.entitlements; sourceTree = "<group>"; };
+		9BE2B20921BFB222004CC236 /* Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Extension.entitlements"; sourceTree = "<group>"; };
 		C6B004CC2339BC9C07EAFBAE /* Pods-Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EC74B5C816273F29D593DE88 /* Pods_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +204,7 @@
 		9BE2B1A921BE3ADF004CC236 /* WatchDataSyncDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B20721BFB1A2004CC236 /* WatchDataSyncDemo.entitlements */,
 				9BE2B1D321BE4D02004CC236 /* Model */,
 				9BE2B1CD21BE45DC004CC236 /* Service */,
 				9BE2B1CA21BE41AA004CC236 /* View */,
@@ -249,6 +255,7 @@
 		9BE2B1DD21BE5F20004CC236 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B20821BFB218004CC236 /* Watch.entitlements */,
 				9BE2B1DE21BE5F20004CC236 /* Interface.storyboard */,
 				9BE2B1E121BE5F20004CC236 /* Assets.xcassets */,
 				9BE2B1E321BE5F20004CC236 /* Info.plist */,
@@ -259,8 +266,10 @@
 		9BE2B1EC21BE5F21004CC236 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B20921BFB222004CC236 /* Watch Extension.entitlements */,
 				9BE2B1ED21BE5F21004CC236 /* InterfaceController.swift */,
 				9BE2B1EF21BE5F21004CC236 /* ExtensionDelegate.swift */,
+				9BE2B20421BE97B6004CC236 /* WDSPlayListRowController.swift */,
 				9BE2B1F121BE5F21004CC236 /* Assets.xcassets */,
 				9BE2B1F321BE5F21004CC236 /* Info.plist */,
 			);
@@ -360,6 +369,11 @@
 				TargetAttributes = {
 					9BE2B1A621BE3ADF004CC236 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9BE2B1BA21BE3AE1004CC236 = {
 						CreatedOnToolsVersion = 10.1;
@@ -367,9 +381,19 @@
 					};
 					9BE2B1DB21BE5F1F004CC236 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9BE2B1E721BE5F21004CC236 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -575,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE2B1F021BE5F21004CC236 /* ExtensionDelegate.swift in Sources */,
+				9BE2B20521BE97B6004CC236 /* WDSPlayListRowController.swift in Sources */,
 				9BE2B20321BE8C08004CC236 /* WDSPlayList.swift in Sources */,
 				9BE2B1EE21BE5F21004CC236 /* InterfaceController.swift in Sources */,
 			);
@@ -749,6 +774,7 @@
 			baseConfigurationReference = 8BD4816A38F72C72EB491863 /* Pods-WatchDataSyncDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchDataSyncDemo/WatchDataSyncDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				INFOPLIST_FILE = WatchDataSyncDemo/Info.plist;
@@ -768,6 +794,7 @@
 			baseConfigurationReference = DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchDataSyncDemo/WatchDataSyncDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				INFOPLIST_FILE = WatchDataSyncDemo/Info.plist;
@@ -831,6 +858,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Watch/Watch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				IBSC_MODULE = Watch_Extension;
@@ -850,6 +878,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Watch/Watch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				IBSC_MODULE = Watch_Extension;
@@ -869,6 +898,7 @@
 			baseConfigurationReference = C6B004CC2339BC9C07EAFBAE /* Pods-Watch Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Watch Extension/Watch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
@@ -892,6 +922,7 @@
 			baseConfigurationReference = 8D7B30AF1AAB1352A5DF03A8 /* Pods-Watch Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Watch Extension/Watch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J4P748ZX6;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
