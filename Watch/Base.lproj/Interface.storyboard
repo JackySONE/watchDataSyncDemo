@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="V4P-J1-Glu">
+                            <items>
+                                <tableRow identifier="PlayListRow" selectable="NO" id="aUM-mD-GHf" customClass="WDSPlayListRowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="UtH-hx-Kkw">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" id="mVQ-Bq-PAR"/>
+                                            <group alignment="left" layout="vertical" id="BVE-QW-Wb0">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="vFQ-dp-3I0">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="name" id="47w-Hl-Ejd"/>
+                                                            <label alignment="right" verticalAlignment="center" text="10" id="pIb-l2-Ern"/>
+                                                        </items>
+                                                    </group>
+                                                    <label width="1" alignment="left" verticalAlignment="bottom" text="describe" id="bkr-0R-nwD"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="decribeLabel" destination="bkr-0R-nwD" id="izT-eg-WVH"/>
+                                        <outlet property="nameLabel" destination="47w-Hl-Ejd" id="N0N-eD-T4D"/>
+                                        <outlet property="scoreLabel" destination="pIb-l2-Ern" id="o89-bs-S3B"/>
+                                        <outlet property="separator" destination="mVQ-Bq-PAR" id="fXn-3S-AOq"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" alignment="left" id="96g-vo-LNz">
+                            <items>
+                                <label alignment="left" text="更新時間" id="1Ms-pd-IEm"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lastUpdateLabel" destination="1Ms-pd-IEm" id="QMS-4v-MOp"/>
+                        <outlet property="playListTable" destination="V4P-J1-Glu" id="XgF-UI-sP9"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
