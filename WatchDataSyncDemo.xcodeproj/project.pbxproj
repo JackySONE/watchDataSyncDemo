@@ -28,6 +28,8 @@
 		9BE2B1F621BE5F21004CC236 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9BE2B1DC21BE5F1F004CC236 /* Watch.app */; };
 		9BE2B20321BE8C08004CC236 /* WDSPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B1D421BE4DED004CC236 /* WDSPlayList.swift */; };
 		9BE2B20521BE97B6004CC236 /* WDSPlayListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B20421BE97B6004CC236 /* WDSPlayListRowController.swift */; };
+		9BE2B20C21C00395004CC236 /* CommonSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B20B21C00395004CC236 /* CommonSetting.swift */; };
+		9BE2B20D21C0039D004CC236 /* CommonSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2B20B21C00395004CC236 /* CommonSetting.swift */; };
 		BE15DD828202693F033A393D /* Pods_WatchDataSyncDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC66444F4712BE3443B73BA /* Pods_WatchDataSyncDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,7 @@
 		9BE2B20721BFB1A2004CC236 /* WatchDataSyncDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchDataSyncDemo.entitlements; sourceTree = "<group>"; };
 		9BE2B20821BFB218004CC236 /* Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Watch.entitlements; sourceTree = "<group>"; };
 		9BE2B20921BFB222004CC236 /* Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch Extension.entitlements"; sourceTree = "<group>"; };
+		9BE2B20B21C00395004CC236 /* CommonSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSetting.swift; sourceTree = "<group>"; };
 		C6B004CC2339BC9C07EAFBAE /* Pods-Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		DA6BCCA82EFB6E3C93102B2C /* Pods-WatchDataSyncDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDataSyncDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDataSyncDemo/Pods-WatchDataSyncDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EC74B5C816273F29D593DE88 /* Pods_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +207,7 @@
 		9BE2B1A921BE3ADF004CC236 /* WatchDataSyncDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9BE2B20A21C0033A004CC236 /* Shared */,
 				9BE2B20721BFB1A2004CC236 /* WatchDataSyncDemo.entitlements */,
 				9BE2B1D321BE4D02004CC236 /* Model */,
 				9BE2B1CD21BE45DC004CC236 /* Service */,
@@ -274,6 +278,14 @@
 				9BE2B1F321BE5F21004CC236 /* Info.plist */,
 			);
 			path = "Watch Extension";
+			sourceTree = "<group>";
+		};
+		9BE2B20A21C0033A004CC236 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2B20B21C00395004CC236 /* CommonSetting.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +595,7 @@
 				9BE2B1AB21BE3ADF004CC236 /* AppDelegate.swift in Sources */,
 				9BE2B1D121BE4642004CC236 /* WDSAlertService.swift in Sources */,
 				9BE2B1D521BE4DED004CC236 /* WDSPlayList.swift in Sources */,
+				9BE2B20C21C00395004CC236 /* CommonSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +613,7 @@
 			files = (
 				9BE2B1F021BE5F21004CC236 /* ExtensionDelegate.swift in Sources */,
 				9BE2B20521BE97B6004CC236 /* WDSPlayListRowController.swift in Sources */,
+				9BE2B20D21C0039D004CC236 /* CommonSetting.swift in Sources */,
 				9BE2B20321BE8C08004CC236 /* WDSPlayList.swift in Sources */,
 				9BE2B1EE21BE5F21004CC236 /* InterfaceController.swift in Sources */,
 			);

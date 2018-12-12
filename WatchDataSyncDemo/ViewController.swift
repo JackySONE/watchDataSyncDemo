@@ -108,6 +108,12 @@ extension ViewController: WCSessionDelegate {
         }
     }
 
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        if let _ = userInfo[PayloadKey.realmDataRequest] as? Bool {
+            transferRealmFile()
+        }
+    }
+
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidComplete")
         print("\(#function): activationDidComplete = \(session.activationState.rawValue)")
