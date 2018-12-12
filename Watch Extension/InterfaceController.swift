@@ -11,10 +11,6 @@ import Foundation
 import RealmSwift
 import WatchConnectivity
 
-struct WatchSettings {
-    static let sharedContainerID = "group.com.sone.SimpleWatchConnectivity"
-    static let lastPlayListSyncTime = "lastPlayListSyncTime"
-}
 
 class InterfaceController: WKInterfaceController {
 
@@ -26,11 +22,7 @@ class InterfaceController: WKInterfaceController {
 
         activateSession()
 
-        configueRealmURL(with: getRealmFileUrl())
-
-        setupPlayList()
-
-        setupLastUpdateTime()
+        checkRealmFile()
     }
     
     override func willActivate() {
@@ -44,16 +36,24 @@ class InterfaceController: WKInterfaceController {
     }
 
     func setupPlayList() {
-        let realm = try! Realm()
-        let playLists = realm.objects(WDSPlayList.self)
 
-        playListTable.setNumberOfRows(playLists.count, withRowType: "PlayListRow")
+        do {
+            let realm = try Realm()
+            let playLists = realm.objects(WDSPlayList.self)
 
-        for index in 0..<playListTable.numberOfRows {
-            guard let controller = playListTable.rowController(at: index) as? WDSPlayListRowController else { continue }
+            playListTable.setNumberOfRows(playLists.count, withRowType: "PlayListRow")
 
-            controller.playList = playLists[index]
+            for index in 0..<playListTable.numberOfRows {
+                guard let controller = playListTable.rowController(at: index) as? WDSPlayListRowController else { continue }
+
+                controller.playList = playLists[index]
+            }
+        } catch let error as NSError {
+            // handle error
+            print("\(error.localizedDescription)")
+            checkRealmFile()
         }
+
     }
 
     func setupLastUpdateTime() {
@@ -62,6 +62,20 @@ class InterfaceController: WKInterfaceController {
                 lastUpdateLabel.setText(lastSyncTime)
             }
         }
+    }
+
+    func checkRealmFile() {
+        let realmFileURL = getRealmFileUrl()
+        guard FileManager.default.fileExists(atPath: realmFileURL.path) else {
+            requestRealmData()
+            return
+        }
+
+        configueRealmURL(with: realmFileURL)
+
+        setupPlayList()
+
+        setupLastUpdateTime()
     }
 
     func getRealmFileUrl() -> URL {
@@ -99,6 +113,10 @@ extension InterfaceController: WCSessionDelegate {
             session.activate()
         }
     }
+
+    func requestRealmData() {
+        WCSession.default.transferUserInfo([PayloadKey.realmDataRequest: true])
+    }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidComplete")
@@ -112,12 +130,16 @@ extension InterfaceController: WCSessionDelegate {
         if FileManager.default.fileExists(atPath: realmURL.path){
             try! FileManager.default.removeItem(at: realmURL)
         }
-        try! FileManager.default.copyItem(at: file.fileURL, to: realmURL)
 
-        configueRealmURL(with: file.fileURL)
+        do {
+            try FileManager.default.copyItem(at: file.fileURL, to: realmURL)
+            configueRealmURL(with: file.fileURL)
 
-        setupPlayList()
+            setupPlayList()
 
-        updateLastSyncTime()
+            updateLastSyncTime()
+        } catch _ {
+            print("error copying file")
+        }
     }
 }
